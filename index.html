@@ -62,7 +62,7 @@
             // Using a static count (like 12345) for the image src won't work 
             // as the server *generates* the count.
             // So, we just use a live site ID.
-            img.src = `http://localhost:3000?site=${index.toString()}&style=${style}&label=visit`;
+            img.src = `https://visitor-tracker-badge.vercel.app?site=${index.toString()}&style=${style}&label=visit`;
             img.alt = `Style: ${style}`;
             
             wrapper.appendChild(styleName);
