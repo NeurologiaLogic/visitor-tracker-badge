@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Badge Style Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">Visitor Badge Style Preview</h1>
+        <p class="text-gray-600 mb-6">Here are all the badge styles available from your server. The count is set to '123K' for this preview.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+            <!-- This script will dynamically generate the list -->
+        </div>
+    </div>
+
+    <script>
+        // List of all 20 styles from your badge-generator.js
+        const styles = [
+            'classic',
+            'flat-green',
+            'flat-red',
+            'flat-yellow',
+            'flat-purple',
+            'pill-blue',
+            'pill-green',
+            'dark-mode',
+            'corporate',
+            'retro-pixel',
+            'minimalist-text',
+            'minimalist-icon',
+            'simple-box',
+            'simple-text',
+            'outline-blue'
+        ];
+
+        // We use a "dummy" site for the preview.
+        // Using a new, random site ID each time ensures we get '1' or a low number.
+        // Using a *static* one like 'preview' will increment it on every page load.
+        // Let's use a static 'preview' site to show it's live.
+        const grid = document.querySelector('.grid');
+
+        styles.forEach((style,index) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'flex items-center justify-between p-3 bg-gray-50 rounded-md border border-gray-200';
+            
+            // Left side: Style name
+            const styleName = document.createElement('code');
+            styleName.className = 'text-sm font-medium text-gray-700';
+            styleName.textContent = style;
+            
+            // Right side: Badge image
+            const img = document.createElement('img');
+            // We use 'site=previewSite&style=' to call the server
+            // Using a static count (like 12345) for the image src won't work 
+            // as the server *generates* the count.
+            // So, we just use a live site ID.
+            img.src = `http://localhost:3000?site=${index.toString()}&style=${style}&label=visit`;
+            img.alt = `Style: ${style}`;
+            
+            wrapper.appendChild(styleName);
+            wrapper.appendChild(img);
+            grid.appendChild(wrapper);
+        });
+    </script>
+</body>
+</html>
+
