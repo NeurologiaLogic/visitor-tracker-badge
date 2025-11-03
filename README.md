@@ -43,6 +43,11 @@ Example (React / Next.js):
 3. The server returns a dynamic image showing the total visits.  
 4. The badge automatically updates whenever your page is viewed.
 
+## Use Cases
+
+1. Showcase visitor counts on your portfolio or personal website.  
+2. Display total views for a blog page.  
+3. Track the number of visitors for individual project or landing pages.
 
 ## Features
 
