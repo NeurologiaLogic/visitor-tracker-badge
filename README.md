@@ -11,12 +11,12 @@ See it live:
 Copy and paste this Markdown anywhere to show your visitor count:
 
 ```bash
-![Page Views](https://visitor-tracker-badge.vercel.app?site=https://your-site.com/&label=Page Views)
+![Page Views](https://visitor-tracker-badge.vercel.app?site=[YOUR SITE]&label=[YOUR LABEL])
 
 Or, if using HTML /React / Next.js:
 
 <img
-  src={`https://visitor-tracker-badge.vercel.app?site=https://your-site.com/${slug}&label=Blog Views`}
+  src={`https://visitor-tracker-badge.vercel.app?site=[YOUR SITE]&label=[YOUR LABEL]`}
   alt={`Views for ${slug}`}
   className="h-6"
 />
@@ -29,8 +29,8 @@ Or, if using HTML /React / Next.js:
 Example (React / Next.js):
 ```js
 <img
-  src={`https://visitor-tracker-badge.vercel.app?site=https://your-site.com/${slug}&label=Blog Views`}
-  alt={`Views for ${slug}`}
+  src={`https://visitor-tracker-badge.vercel.app?site=https://patrickkwon.my.id&label=Portofolio Views`}
+  alt={`Portofolio Views`}
   className="h-6"
 />
 ```
@@ -38,7 +38,7 @@ Example (React / Next.js):
 
 ## How It Works
 
-1. The badge sends a request to `visitor-tracker-badge.vercel.app` with your site url as the key.  
+1. When someone load the page, the badge sends a request to `visitor-tracker-badge.vercel.app` with your site url as the key.  
 2. The server counts the number of visits for that URL.  
 3. The server returns a dynamic image showing the total visits.  
 4. The badge automatically updates whenever your page is viewed.
@@ -48,7 +48,7 @@ Example (React / Next.js):
 
 - Lightweight and script-free  
 - Shows live visitor counts  
-- Customizable label and size  
+- Many Presets  
 - Works on any static or dynamic website  
 
 ## License
