@@ -11,12 +11,12 @@ See it live:
 Copy and paste this Markdown anywhere to show your visitor count:
 
 ```bash
-![Page Views](https://visitor-tracker-badge.vercel.app?site=[YOUR SITE]&label=[YOUR LABEL])
+![Page Views](https://visitor-tracker-badge.vercel.app?site=[YOUR SITE]&label=[YOUR LABEL]&style=[CHECK DEMO])
 
 Or, if using HTML /React / Next.js:
 
 <img
-  src={`https://visitor-tracker-badge.vercel.app?site=[YOUR SITE]&label=[YOUR LABEL]`}
+  src={`https://visitor-tracker-badge.vercel.app?site=[YOUR SITE]&label=[YOUR LABEL]&style=[CHECK DEMO]`}
   alt={`Views for ${slug}`}
   className="h-6"
 />
